@@ -28,7 +28,7 @@ namespace LibGetDownloaderCli {
                     Console.WriteLine("Repo URL: " + options.Repository);
                     Repo repo = Repo.GetRepo(options.Repository);
 
-                    if (!String.IsNullOrWhiteSpace(options.Package)) {
+                    if (String.IsNullOrWhiteSpace(options.Package)) {
                         Console.WriteLine("Specify a package (-p) to display info for.");
                         return 1;
                         

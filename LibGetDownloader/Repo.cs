@@ -13,7 +13,7 @@ namespace LibGetDownloader {
         public static Repo GetRepo(string Url) {
             using (HttpClient client = new HttpClient()) {
                 while (Url.EndsWith("/")) {
-                    Url.Remove(Url.Length - 1);
+                    Url = Url.Remove(Url.Length - 1);
                 }
 
                 string repoJson = client.GetAsync($"{Url}/repo.json").Result.Content.ReadAsStringAsync().Result;
