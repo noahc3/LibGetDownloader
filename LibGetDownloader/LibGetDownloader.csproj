@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>noahc3</Authors>
+    <Company>noahc3</Company>
+    <PackageProjectUrl>https://github.com/noahc3/LibGetDownloader/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/noahc3/LibGetDownloader.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
