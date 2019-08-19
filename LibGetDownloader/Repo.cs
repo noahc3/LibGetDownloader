@@ -12,7 +12,11 @@ namespace LibGetDownloader {
         public Package[] Packages;
         public static Repo GetRepo(string Url) {
             using (HttpClient client = new HttpClient()) {
-                string repoJson = client.GetAsync(Url + "repo.json").Result.Content.ReadAsStringAsync().Result;
+                while (Url.EndsWith("/")) {
+                    Url.Remove(Url.Length - 1);
+                }
+
+                string repoJson = client.GetAsync($"{Url}/repo.json").Result.Content.ReadAsStringAsync().Result;
                 Repo repo = JsonConvert.DeserializeObject<Repo>(repoJson);
                 repo.Url = Url;
                 return repo;
@@ -38,7 +42,7 @@ namespace LibGetDownloader {
         public byte[] DownloadPackageToMemory(string packageName) {
             using (HttpClient client = new HttpClient()) {
                 Package package = GetPackage(packageName);
-                string zipUrl = $"{Url}zips/{package.Name}.zip";
+                string zipUrl = $"{Url}/zips/{package.Name}.zip";
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Head, zipUrl);
                 HttpResponseMessage resp = client.SendAsync(request).Result;
                 if (!resp.IsSuccessStatusCode) {
