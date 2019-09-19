@@ -1,5 +1,7 @@
 # LibGetDownloader
 
+[![Nuget](https://img.shields.io/nuget/v/LibGetDownloader?style=flat-square)](https://www.nuget.org/packages/LibGetDownloader/)
+
 This is a .NET Standard library for interfacing with remote libget repositories. This allows easy retrieval of package information and downloading of packages from libget repositories.
 
 For more information on libget, see https://github.com/vgmoose/libget
