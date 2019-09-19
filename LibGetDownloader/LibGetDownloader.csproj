@@ -10,6 +10,7 @@
     <Copyright>Copyright © 2019 noahc3</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryType>Git</RepositoryType>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
