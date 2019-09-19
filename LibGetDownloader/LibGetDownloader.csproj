@@ -3,14 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>noahc3</Authors>
-    <Company>noahc3</Company>
+    <Company>Team AtlasNX</Company>
     <PackageProjectUrl>https://github.com/noahc3/LibGetDownloader/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/noahc3/LibGetDownloader.git</RepositoryUrl>
+    <Description>A .NET Standard library for interfacing with remote libget repositories. This allows easy retrieval of package information and downloading of packages from libget repositories.</Description>
+    <Copyright>Copyright © 2019 noahc3</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3-beta1" />
     <PackageReference Include="SharpZipLib" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

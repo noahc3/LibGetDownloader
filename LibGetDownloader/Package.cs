@@ -11,8 +11,7 @@ namespace LibGetDownloader {
         public string Title;
         public string Author;
         public string Version;
-        [JsonConverter(typeof(StringEnumConverter))]
-        public Category Category;
+        public string Category;
         public string Details;
         public string Description;
 
@@ -54,9 +53,5 @@ namespace LibGetDownloader {
             return String.Join(Environment.NewLine, lines);
         }
 
-    }
-
-    public enum Category { 
-        theme, game, tool, concept, advanced, emu, _misc, loader, misc
     }
 }

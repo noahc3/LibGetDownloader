@@ -18,7 +18,7 @@ namespace LibGetDownloaderCli {
                             Console.WriteLine(k.ToString());
                         }
                     } else {
-                        foreach (Package k in repo.Packages.Where(x => options.Categories.Contains(x.Category.ToString()))) {
+                        foreach (Package k in repo.Packages.Where(x => options.Categories.Contains(x.Category))) {
                             Console.WriteLine(k.ToString());
                         }
                     }

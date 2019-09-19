@@ -1,13 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Authors>noahc3</Authors>
-    <Company>noahc3</Company>
+    <Company>Team AtlasNX</Company>
     <PackageProjectUrl>https://github.com/noahc3/LibGetDownloader/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/noahc3/LibGetDownloader.git</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LibGetDownloader\LibGetDownloader.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
